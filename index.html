@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawson Gant — Entrepreneur, Investor & Operator</title>
+    <meta name="description" content="Dawson Gant is a serial entrepreneur, investor, and operator building high-growth ventures across e-commerce, real estate, and technology. Based in Miami, FL.">
+    <meta name="keywords" content="Dawson Gant, entrepreneur, investor, OfferLaunch, real estate, e-commerce, Miami">
+    <meta name="author" content="Dawson Gant">
+    <link rel="canonical" href="https://thedawsongant.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dawson Gant — Entrepreneur, Investor & Operator">
+    <meta property="og:description" content="Serial entrepreneur building high-growth ventures across e-commerce, real estate, and technology.">
+    <meta property="og:url" content="https://thedawsongant.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dawson Gant">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DawsonGant">
+    <meta name="twitter:title" content="Dawson Gant — Entrepreneur, Investor & Operator">
+    <meta name="twitter:description" content="Serial entrepreneur building high-growth ventures across e-commerce, real estate, and technology.">
+
+    <!-- Schema.org Person Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dawson Gant",
+        "url": "https://thedawsongant.com",
+        "sameAs": [
+            "https://www.instagram.com/dawsongant/",
+            "https://www.linkedin.com/in/dawson-gant-b50894173/",
+            "https://x.com/DawsonGant",
+            "https://www.youtube.com/@dawsongant",
+            "https://dawsongant.co"
+        ],
+        "jobTitle": "CEO & Founder",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "OfferLaunch"
+        },
+        "description": "Serial entrepreneur, investor, and operator building high-growth ventures across e-commerce, real estate, and technology.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "knowsAbout": ["Entrepreneurship", "E-Commerce", "Real Estate Investing", "Sales Operations", "Venture Capital", "Business Strategy"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --gray-800: #262626;
+            --accent: #2563eb;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Nav */
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-name {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--white); }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 0 80px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .hero-label {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            margin-bottom: 32px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: var(--gray-400);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+        
+        /* Stats */
+        .stats {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+        }
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        section h2 {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        section p {
+            font-size: 17px;
+            color: var(--gray-400);
+            max-width: 720px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        /* Ventures Grid */
+        .ventures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .venture-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 40px;
+            transition: border-color 0.3s;
+        }
+        .venture-card:hover {
+            border-color: rgba(255,255,255,0.15);
+        }
+        .venture-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .venture-card .venture-type {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+        .venture-card p {
+            font-size: 15px;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+        
+        /* Media */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .media-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.3s;
+        }
+        .media-card:hover { border-color: rgba(255,255,255,0.15); }
+        .media-card .source {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .media-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .media-card p {
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin-top: 48px;
+        }
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 32px;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .timeline-year {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gray-400);
+            padding-top: 4px;
+        }
+        .timeline-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .timeline-content p {
+            font-size: 15px;
+            color: var(--gray-400);
+            margin-bottom: 0;
+        }
+        
+        /* Contact */
+        .contact-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.3);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 80px 0 60px; }
+            .nav-links { display: none; }
+            .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+            .stats-grid { gap: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-name">Dawson Gant</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#ventures">Ventures</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <div class="hero-label">Entrepreneur &middot; Investor &middot; Operator</div>
+        <h1>Dawson Gant</h1>
+        <p>Building infrastructure and deploying capital for elite operators launching the next generation of high-growth ventures. Based in Miami.</p>
+    </div>
+</header>
+
+<div class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Years in Business</div>
+            </div>
+            <div>
+                <div class="stat-number">250+</div>
+                <div class="stat-label">Stores Managed</div>
+            </div>
+            <div>
+                <div class="stat-number">8 Fig</div>
+                <div class="stat-label">Revenue Generated</div>
+            </div>
+            <div>
+                <div class="stat-number">Miami</div>
+                <div class="stat-label">Headquarters</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="about">
+    <div class="container">
+        <div class="section-label">About</div>
+        <h2>Building Things That Matter</h2>
+        <p>Dawson Gant is a serial entrepreneur who started his career in real estate at 18 years old. Within three years, he built an eight-figure real estate investment company, then expanded into e-commerce, managed services, and venture investing.</p>
+        <p>Today, Dawson leads OfferLaunch — a growth infrastructure firm that provides capital, sales operations, and scaling systems for elite operators launching high-ticket offers. His portfolio spans e-commerce operations, health and wellness brands, financial technology, and real estate.</p>
+        <p>Known for his hands-on operating style and relentless execution, Dawson focuses on building real businesses with real revenue — not hype cycles. His approach is simple: find great operators, give them infrastructure, and get out of the way.</p>
+    </div>
+</section>
+
+<section id="ventures">
+    <div class="container">
+        <div class="section-label">Ventures</div>
+        <h2>Current Portfolio</h2>
+        <div class="ventures-grid">
+            <div class="venture-card">
+                <h3>OfferLaunch</h3>
+                <div class="venture-type">Growth Infrastructure</div>
+                <p>Full-stack sales operations and growth infrastructure for high-ticket offer operators. Provides closers, setters, CRM systems, paid media, and scaling playbooks to take offers from zero to seven figures.</p>
+            </div>
+            <div class="venture-card">
+                <h3>E-Commerce Operations</h3>
+                <div class="venture-type">Managed Services</div>
+                <p>Managed e-commerce store operations across eBay, Walmart, and other major marketplaces. Overseeing 250+ active stores with full-service product research, sourcing, listing, fulfillment, and customer service.</p>
+            </div>
+            <div class="venture-card">
+                <h3>Health & Wellness</h3>
+                <div class="venture-type">DTC Brands</div>
+                <p>Building direct-to-consumer brands in the health, wellness, and peptide space. Focused on premium products with clinical-grade sourcing, third-party testing, and exceptional customer experience.</p>
+            </div>
+            <div class="venture-card">
+                <h3>Real Estate</h3>
+                <div class="venture-type">Investments</div>
+                <p>Portfolio of real estate investments built from the ground up starting at age 18. Experience spans wholesaling, fix-and-flip, capital raising, and long-term asset acquisition across multiple markets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="media">
+    <div class="container">
+        <div class="section-label">Media & Press</div>
+        <h2>Featured In</h2>
+        <div class="media-grid">
+            <a href="https://www.eofire.com/podcast/dawsongant/" class="media-card" target="_blank" rel="noopener">
+                <div class="source">Entrepreneurs on Fire</div>
+                <h3>Done For You E-Commerce with Dawson Gant</h3>
+                <p>Dawson joins John Lee Dumas to discuss building a managed services empire overseeing 250+ online retail stores.</p>
+            </a>
+            <a href="https://learn.upright.us/real-estate-investing-unscripted-podcast/episode_28-dawson_gant" class="media-card" target="_blank" rel="noopener">
+                <div class="source">Real Estate Investing Unscripted</div>
+                <h3>Making Millions at 23 — Dawson Gant</h3>
+                <p>A deep dive into how Dawson built an eight-figure real estate company before turning 25.</p>
+            </a>
+            <a href="https://nickhiter.com/hitstreak/episode-49-how-to-pivot-your-business-to-bigger-profits-w-dawson-gant/" class="media-card" target="_blank" rel="noopener">
+                <div class="source">The Hit Streak Podcast</div>
+                <h3>How To Pivot Your Business To Bigger Profits</h3>
+                <p>Dawson shares the frameworks behind pivoting from real estate into e-commerce and managed services.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="journey">
+    <div class="container">
+        <div class="section-label">Journey</div>
+        <h2>The Path So Far</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2018</div>
+                <div class="timeline-content">
+                    <h3>Started in Real Estate</h3>
+                    <p>Got licensed at 18 and immediately transitioned from agent to investor, seeing the bigger opportunity in deal flow and capital deployment.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019–2020</div>
+                <div class="timeline-content">
+                    <h3>Eight-Figure Real Estate Company</h3>
+                    <p>Built a real estate investment company to eight figures in under three years through wholesaling, flipping, and capital raising.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h3>Expanded into E-Commerce</h3>
+                    <p>Launched managed e-commerce operations, eventually scaling to 250+ stores across major online marketplaces.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023–2024</div>
+                <div class="timeline-content">
+                    <h3>Founded OfferLaunch</h3>
+                    <p>Created OfferLaunch to provide growth infrastructure — sales teams, systems, and capital — for elite operators scaling high-ticket offers.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025–Present</div>
+                <div class="timeline-content">
+                    <h3>Portfolio Expansion</h3>
+                    <p>Expanding into health and wellness DTC brands, financial technology partnerships, and venture investments in high-growth operators.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="section-label">Connect</div>
+        <h2>Get in Touch</h2>
+        <p>For business inquiries, partnership opportunities, or media requests.</p>
+        <div class="contact-links">
+            <a href="https://www.instagram.com/dawsongant/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/in/dawson-gant-b50894173/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/DawsonGant" target="_blank" rel="noopener">X / Twitter</a>
+            <a href="https://www.youtube.com/@dawsongant" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://dawsongant.co" target="_blank" rel="noopener">dawsongant.co</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        &copy; 2026 Dawson Gant. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
