@@ -8,17 +8,13 @@
     <meta name="keywords" content="Dawson Gant, entrepreneur, investor, real estate, growth operations, telehealth, Miami">
     <meta name="author" content="Dawson Gant">
     <link rel="canonical" href="https://thedawsongant.com/">
-    
     <meta property="og:title" content="Dawson Gant — Entrepreneur & Investor">
     <meta property="og:description" content="Entrepreneur and investor focused on growth operations, real estate, and telehealth. Based in Miami.">
     <meta property="og:url" content="https://thedawsongant.com/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dawson Gant">
-    
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@DawsonGant">
     <meta name="twitter:title" content="Dawson Gant — Entrepreneur & Investor">
-    <meta name="twitter:description" content="Entrepreneur and investor focused on growth operations, real estate, and telehealth.">
 
     <script type="application/ld+json">
     {
@@ -35,141 +31,543 @@
         ],
         "jobTitle": "Entrepreneur & Investor",
         "description": "Entrepreneur and investor focused on growth operations, real estate, and telehealth.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Miami",
-            "addressRegion": "FL",
-            "addressCountry": "US"
-        },
-        "knowsAbout": ["Growth Operations", "Real Estate", "Telehealth", "Business Strategy", "Investing"]
+        "address": {"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"},
+        "knowsAbout": ["Growth Operations","Real Estate","Telehealth","Business Strategy","Investing"]
     }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --black: #0a0a0a; --white: #fff; --gray-400: #a3a3a3; --gray-600: #525252; --accent: #2563eb; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        nav { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #050505;
+            --surface: #0c0c0c;
+            --border: rgba(255,255,255,0.07);
+            --text: #e8e8e8;
+            --text-muted: #7a7a7a;
+            --accent: #6366f1;
+            --accent-glow: rgba(99,102,241,0.15);
+            --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+        
+        /* Grain overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        /* Nav */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 20px 0;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(5,5,5,0.8);
+            border-bottom: 1px solid var(--border);
+        }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav-name { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
-        .nav-links { display: flex; gap: 32px; list-style: none; }
-        .nav-links a { color: var(--gray-400); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--white); }
-        .hero { padding: 100px 0 70px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .hero h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 24px; }
-        .hero p { font-size: 18px; color: var(--gray-400); max-width: 560px; line-height: 1.7; }
-        section { padding: 70px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .section-label { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-        section h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; }
-        section p { font-size: 16px; color: var(--gray-400); max-width: 640px; line-height: 1.8; margin-bottom: 14px; }
-        .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 36px; }
-        .area-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 32px; }
-        .area-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-        .area-card p { font-size: 15px; color: var(--gray-400); line-height: 1.7; margin-bottom: 0; }
-        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 36px; }
-        .media-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 28px; text-decoration: none; color: inherit; transition: border-color 0.3s; }
-        .media-card:hover { border-color: rgba(255,255,255,0.15); }
-        .media-card .source { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
-        .media-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
-        .media-card p { font-size: 14px; color: var(--gray-400); margin-bottom: 0; }
-        .contact-links { display: flex; gap: 20px; margin-top: 28px; flex-wrap: wrap; }
-        .contact-links a { padding: 10px 22px; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: var(--white); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-        .contact-links a:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
-        footer { padding: 36px 0; text-align: center; color: var(--gray-600); font-size: 14px; }
-        @media (max-width: 768px) { .hero { padding: 70px 0 50px; } .nav-links { display: none; } }
+        .nav-logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-links { display: flex; gap: 36px; list-style: none; }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 20s ease-in-out infinite;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 25s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 32px;
+            padding: 8px 16px;
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 100px;
+            background: rgba(99,102,241,0.06);
+        }
+        .hero h1 {
+            font-size: clamp(44px, 6.5vw, 76px);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin-bottom: 28px;
+        }
+        .hero h1 .gradient {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 480px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .btn {
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+        .btn-ghost {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-ghost:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.03); }
+        
+        /* Divider line */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+        
+        /* About */
+        .about {
+            padding: 100px 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+        .about-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        .about h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .about-right p {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+        
+        /* Focus Areas */
+        .focus {
+            padding: 100px 0;
+        }
+        .focus-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .focus-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .focus-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 32px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .focus-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .focus-card:hover {
+            border-color: rgba(99,102,241,0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .focus-card:hover::before { opacity: 1; }
+        .focus-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--accent-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 22px;
+        }
+        .focus-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .focus-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+        
+        /* Press */
+        .press {
+            padding: 100px 0;
+        }
+        .press-header {
+            margin-bottom: 48px;
+        }
+        .press-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .press-list { display: grid; gap: 12px; }
+        .press-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 32px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+        .press-item:hover {
+            border-color: rgba(99,102,241,0.3);
+            transform: translateX(4px);
+        }
+        .press-source {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .press-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .press-arrow {
+            font-size: 20px;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+        }
+        .press-item:hover .press-arrow { transform: translateX(4px); }
+        
+        /* Connect */
+        .connect {
+            padding: 100px 0;
+        }
+        .connect-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .connect-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        .connect-header p {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .connect-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 28px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+        }
+        .connect-card:hover {
+            border-color: rgba(99,102,241,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        }
+        .connect-name {
+            font-family: 'Sora', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .connect-handle {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .focus-grid { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; }
+            .container { padding: 0 20px; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
     <div class="container">
-        <div class="nav-name">Dawson Gant</div>
+        <div class="nav-logo">Dawson Gant</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#focus">Focus</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#connect">Connect</a></li>
         </ul>
     </div>
 </nav>
 
-<header class="hero">
+<section class="hero">
     <div class="container">
-        <h1>Dawson Gant</h1>
-        <p>Entrepreneur and investor based in Miami. Building across growth operations, real estate, and telehealth.</p>
-    </div>
-</header>
-
-<section id="about">
-    <div class="container">
-        <div class="section-label">About</div>
-        <h2>Background</h2>
-        <p>Dawson Gant started in real estate at 18, transitioning from agent to investor early on. He went on to build and operate businesses across managed services, sales operations, and e-commerce before expanding into telehealth and wellness.</p>
-        <p>Today, Dawson Gant focuses on three areas: growth operations, real estate, and telehealth. His approach is hands-on — building teams, systems, and infrastructure that help businesses scale efficiently.</p>
+        <div class="hero-content">
+            <div class="hero-tag">Miami, FL</div>
+            <h1>Dawson <span class="gradient">Gant</span></h1>
+            <p class="hero-sub">Entrepreneur and investor. Building across growth operations, real estate, and telehealth.</p>
+            <div class="hero-cta">
+                <a href="#connect" class="btn btn-primary">Get in Touch</a>
+                <a href="#about" class="btn btn-ghost">Learn More</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="focus">
+<div class="divider"></div>
+
+<section class="about" id="about">
     <div class="container">
-        <div class="section-label">Focus Areas</div>
-        <h2>What Dawson Gant Works On</h2>
-        <div class="areas-grid">
-            <div class="area-card">
+        <div class="about-grid">
+            <div class="about-left">
+                <div class="about-label">About</div>
+                <h2>Dawson Gant</h2>
+            </div>
+            <div class="about-right">
+                <p>Dawson Gant got into business early — starting in real estate at 18, then expanding into managed services, sales operations, and e-commerce over the years.</p>
+                <p>Now based in Miami, Dawson Gant works across three areas: growth operations, real estate, and telehealth. His approach is hands-on — building teams and systems rather than investing from the sidelines.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="focus" id="focus">
+    <div class="container">
+        <div class="focus-header">
+            <div class="about-label">Focus Areas</div>
+            <h2>What Dawson Gant Works On</h2>
+        </div>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <div class="focus-icon">📈</div>
                 <h3>Growth Operations</h3>
-                <p>Building sales teams, operational systems, and scaling infrastructure for businesses selling high-ticket products and services.</p>
+                <p>Sales teams, operational systems, and infrastructure for businesses scaling high-ticket products and services.</p>
             </div>
-            <div class="area-card">
+            <div class="focus-card">
+                <div class="focus-icon">🏗️</div>
                 <h3>Real Estate</h3>
-                <p>Investing in and developing real estate across multiple markets. Experience spans wholesaling, flips, capital raising, and long-term holdings.</p>
+                <p>Investing and development across multiple markets — wholesaling, flips, capital raising, and long-term holdings.</p>
             </div>
-            <div class="area-card">
+            <div class="focus-card">
+                <div class="focus-icon">⚕️</div>
                 <h3>Telehealth</h3>
-                <p>Building and investing in direct-to-consumer telehealth and wellness brands focused on quality products and modern distribution.</p>
+                <p>Direct-to-consumer telehealth and wellness brands focused on quality sourcing and modern distribution.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="media">
+<div class="divider"></div>
+
+<section class="press" id="press">
     <div class="container">
-        <div class="section-label">Media</div>
-        <h2>Dawson Gant in the Media</h2>
-        <div class="media-grid">
-            <a href="https://www.eofire.com/podcast/dawsongant/" class="media-card" target="_blank" rel="noopener">
-                <div class="source">Entrepreneurs on Fire</div>
-                <h3>Done For You E-Commerce with Dawson Gant</h3>
-                <p>Conversation with John Lee Dumas on building managed services businesses.</p>
+        <div class="press-header">
+            <div class="about-label">Media</div>
+            <h2>Dawson Gant in the Press</h2>
+        </div>
+        <div class="press-list">
+            <a href="https://www.eofire.com/podcast/dawsongant/" class="press-item" target="_blank" rel="noopener">
+                <div>
+                    <div class="press-source">Entrepreneurs on Fire</div>
+                    <div class="press-title">Done For You E-Commerce with Dawson Gant</div>
+                </div>
+                <div class="press-arrow">→</div>
             </a>
-            <a href="https://learn.upright.us/real-estate-investing-unscripted-podcast/episode_28-dawson_gant" class="media-card" target="_blank" rel="noopener">
-                <div class="source">Real Estate Investing Unscripted</div>
-                <h3>Real Estate & Entrepreneurship — Dawson Gant</h3>
-                <p>On getting started in real estate early and building an investment portfolio.</p>
+            <a href="https://learn.upright.us/real-estate-investing-unscripted-podcast/episode_28-dawson_gant" class="press-item" target="_blank" rel="noopener">
+                <div>
+                    <div class="press-source">Real Estate Investing Unscripted</div>
+                    <div class="press-title">Real Estate & Entrepreneurship — Dawson Gant</div>
+                </div>
+                <div class="press-arrow">→</div>
             </a>
-            <a href="https://nickhiter.com/hitstreak/episode-49-how-to-pivot-your-business-to-bigger-profits-w-dawson-gant/" class="media-card" target="_blank" rel="noopener">
-                <div class="source">The Hit Streak Podcast</div>
-                <h3>Pivoting Your Business to Bigger Profits</h3>
-                <p>On pivoting between industries and finding new opportunities.</p>
+            <a href="https://nickhiter.com/hitstreak/episode-49-how-to-pivot-your-business-to-bigger-profits-w-dawson-gant/" class="press-item" target="_blank" rel="noopener">
+                <div>
+                    <div class="press-source">The Hit Streak Podcast</div>
+                    <div class="press-title">Pivoting Your Business to Bigger Profits</div>
+                </div>
+                <div class="press-arrow">→</div>
             </a>
         </div>
     </div>
 </section>
 
-<section id="contact">
+<div class="divider"></div>
+
+<section class="connect" id="connect">
     <div class="container">
-        <div class="section-label">Connect</div>
-        <h2>Get in Touch with Dawson Gant</h2>
-        <p>For business inquiries, partnerships, or media.</p>
-        <div class="contact-links">
-            <a href="https://www.instagram.com/dawsongant/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.linkedin.com/in/dawson-gant-b50894173/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/DawsonGant" target="_blank" rel="noopener">X / Twitter</a>
-            <a href="https://www.youtube.com/@dawsongant" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://dawsongant.co" target="_blank" rel="noopener">dawsongant.co</a>
+        <div class="connect-header">
+            <div class="about-label">Connect</div>
+            <h2>Get in Touch with Dawson Gant</h2>
+            <p>Business inquiries, partnerships, or media.</p>
+        </div>
+        <div class="connect-grid">
+            <a href="https://www.instagram.com/dawsongant/" class="connect-card" target="_blank" rel="noopener">
+                <div class="connect-name">Instagram</div>
+                <div class="connect-handle">@dawsongant</div>
+            </a>
+            <a href="https://www.linkedin.com/in/dawson-gant-b50894173/" class="connect-card" target="_blank" rel="noopener">
+                <div class="connect-name">LinkedIn</div>
+                <div class="connect-handle">Dawson Gant</div>
+            </a>
+            <a href="https://x.com/DawsonGant" class="connect-card" target="_blank" rel="noopener">
+                <div class="connect-name">X / Twitter</div>
+                <div class="connect-handle">@DawsonGant</div>
+            </a>
+            <a href="https://www.youtube.com/@dawsongant" class="connect-card" target="_blank" rel="noopener">
+                <div class="connect-name">YouTube</div>
+                <div class="connect-handle">@dawsongant</div>
+            </a>
         </div>
     </div>
 </section>
