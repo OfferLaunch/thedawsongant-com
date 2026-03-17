@@ -230,7 +230,7 @@ body {
 .stagger-4 { transition-delay: 0.55s; }
 
 /* ─── NAV ─── */
-nav {
+#main-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -240,14 +240,14 @@ nav {
   transition: all 0.4s ease;
   background: transparent;
 }
-nav.scrolled {
+#main-nav.scrolled {
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 14px 0;
   border-bottom: 1px solid rgba(200, 160, 74, 0.1);
 }
-nav .container {
+#main-nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -286,6 +286,7 @@ nav .container {
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--text-primary); margin: 6px 0; transition: all 0.3s; }
+footer nav { position: static; padding: 0; background: none; z-index: auto; }
 
 /* ─── HERO ─── */
 .hero {
@@ -734,7 +735,7 @@ footer a:hover { color: var(--gold); }
 <body>
 
 <!-- ─── NAV ─── -->
-<nav aria-label="Primary navigation for Dawson Gant website">
+<nav id="main-nav" aria-label="Primary navigation for Dawson Gant website">
   <div class="container">
     <a href="/" class="nav-logo" aria-label="Dawson Gant home">DAWSON GANT</a>
     <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
@@ -1000,7 +1001,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 
 // Nav scroll
-const nav = document.querySelector('nav');
+const nav = document.querySelector('#main-nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
