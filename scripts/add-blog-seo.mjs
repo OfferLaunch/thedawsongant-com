@@ -199,7 +199,7 @@ const dirs = ["public/blog", "blog"];
 
 for (const dir of dirs) {
   for (const post of posts) {
-    const filePath = path.join(dir, `${post.slug}.html`);
+    const filePath = path.join(dir, post.slug, "index.html");
     injectSeo(filePath, '<link rel="preconnect"', seoHead(post));
   }
   injectSeo(path.join(dir, "index.html"), '<link rel="preconnect"', blogIndexSchema());
