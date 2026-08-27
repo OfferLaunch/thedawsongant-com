@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="DG">
-  <circle cx="16" cy="16" r="16" fill="#FFFFFF"/>
-  <text x="16" y="21" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="13" fill="#0B1C2D">DG</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="D">
+  <circle cx="16" cy="16" r="16" fill="#E1E0CC"/>
+  <text
+    x="16"
+    y="16.5"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
+    font-weight="700"
+    font-size="18"
+    fill="#0A0A0A"
+  >D</text>
 </svg>
