@@ -6,8 +6,10 @@ export default function App() {
   return (
     <>
       <SiteNav />
-      <PrismaHero imageSrc="/dawson-gant-office-portrait.jpg" imageAlt="Dawson Gant professional portrait in an office, wearing a dark suit and black shirt" />
-      <SiteSections />
+      <main id="main-content">
+        <PrismaHero imageSrc="/dawson-gant-office-portrait.jpg" imageAlt="Dawson Gant professional portrait in an office, wearing a dark suit and black shirt" />
+        <SiteSections />
+      </main>
     </>
   );
 }

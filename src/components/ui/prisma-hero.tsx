@@ -71,7 +71,7 @@ const PrismaHero = ({
   };
 
   return (
-    <section className="h-screen w-full p-3 sm:p-4 md:p-5">
+    <section id="hero" className="h-screen w-full p-3 sm:p-4 md:p-5">
       <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-[2rem]">
         <img
           src={imageSrc}
@@ -145,7 +145,7 @@ const PrismaHero = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="text-xs sm:text-sm md:text-base"
+                className="hero-desc text-xs sm:text-sm md:text-base"
                 style={{ lineHeight: 1.2, color: "rgba(225, 224, 204, 0.7)" }}
               >
                 Scottsdale operator and real estate investor. Over a hundred houses built and flipped since eighteen. Ventures taken to seven figures. Seven figures put back into the communities that raised him.
